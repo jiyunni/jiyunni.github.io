@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    color: #151515;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.container {
+    width: min(760px, calc(100% - 220px));
+    margin: 0 auto;
+    padding: 96px 0 40px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 250px;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 64px;
+}
+
+.hero-text {
+    min-width: 0;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    line-height: 1.05;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+}
+
+h2 {
+    margin: 0 0 26px;
+    padding: 0;
+    border: 0;
+    font-size: 1.5rem;
+    line-height: 1.15;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+h3 {
+    margin: 0 0 3px;
+    font-size: 1rem;
+    line-height: 1.35;
+    font-weight: 600;
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+section {
+    margin-bottom: 62px;
+}
+
+.lead,
+.mission {
+    max-width: 720px;
+    font-size: 0.98rem;
+}
+
+.mission {
+    margin-top: 16px;
+}
+
+.section-intro {
+    max-width: 1080px;
+}
+
+.links,
+.item-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+}
+
+.links {
+    justify-content: center;
+    margin-top: 22px;
+    font-size: 0.98rem;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration: underline;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    background: #e8e8e8;
+}
+
+.publication-item {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.publication-item:last-child {
+    margin-bottom: 0;
+}
+
+.pub-thumb-link {
+    display: block;
+}
+
+.pub-thumb,
+.pub-thumb-placeholder {
+    width: 180px;
+    height: 105px;
+    object-fit: contain;
+    background: #f4f4f4;
+}
+
+.pub-thumb-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dddddd;
+    color: #888888;
+    font-size: 0.85rem;
+}
+
+.pub-details h3 a {
+    font-size: 1.02rem;
+    font-weight: 700;
+}
+
+.venue {
+    margin-bottom: 0;
+}
+
+.item-links {
+    margin-top: 2px;
+}
+
+.text-item {
+    margin-bottom: 30px;
+}
+
+.text-item:last-child {
+    margin-bottom: 0;
+}
+
+.meta,
+.date {
+    color: #666666;
+    font-size: 0.88rem;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+    margin-bottom: 28px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.date {
+    min-width: 220px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.clean-list {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.clean-list li {
+    margin-bottom: 9px;
+}
+
+footer {
+    padding-top: 20px;
+    border-top: 1px solid #dddddd;
+    color: #777777;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 17px;
+    }
+
+    .container {
+        width: min(100% - 36px, 760px);
+        padding-top: 34px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .profile-photo {
+        grid-row: 1;
+        width: 230px;
+        height: 230px;
+    }
+
+    .links {
+        justify-content: flex-start;
+    }
+
+    .publication-item {
+        grid-template-columns: 180px minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .pub-thumb,
+    .pub-thumb-placeholder {
+        width: 180px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        width: min(100% - 28px, 560px);
+    }
+
+    h1 {
+        font-size: 2.55rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .publication-item {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-bottom: 42px;
+    }
+
+    .pub-thumb,
+    .pub-thumb-placeholder {
+        width: 100%;
+        height: auto;
+        min-height: 130px;
+        max-height: 220px;
+    }
+
+    .timeline-item {
+        display: block;
+    }
+
+    .date {
+        min-width: 0;
+        margin-top: 5px;
+        text-align: left;
+        white-space: normal;
+    }
+}
